@@ -1,0 +1,187 @@
+<html><head>
+        <style>
+           .container{
+                color: rgba(12, 2, 21, 0.936);
+                margin: 60px;
+                padding: 10px;
+                cursor: pointer;
+                text-align: justify;
+                font-family: "Poppins", serif;
+                display: grid;
+                grid-template-columns: repeat(4,1fr);
+                grid-auto-rows: minmax(100px,auto);
+                grid-gap: 15px;
+                grid-template-areas:
+                "b1 b1 b1 b1"
+                "b2 b2 b3 b3"
+                "b2 b2 b3 b3"
+                "b4 b5 b5 b5 "
+                "b6  b5 b5 b5"
+                "b7 b7 b7 b7 "
+                "b8 b8 b8 b8";
+            }
+            .b1,.b2,.b3,.b4,.b5,.b6,.b7,.b8{
+                padding: 25px;
+                border-radius: 15px;
+                box-shadow: 0 0 5px 5px rgba(24, 23, 23, 0.5);
+            }
+            .b1{
+                grid-area: b1;
+                background-color: rgba(236, 236, 241, 0.9);
+             }
+             .b2{
+                grid-area: b2;
+                background-color: rgba(236, 236, 241, 0.9);
+             }
+             .b3{
+                grid-area: b3;
+                background-color:rgba(236, 236, 241, 0.9);
+             }
+            .b5{
+                grid-area: b5;
+                background-color: rgba(236, 236, 241, 0.9);
+             }
+            .b6{
+                grid-area: b6;
+                background-color: rgba(236, 236, 241, 0.9);
+            }
+            .b4{
+                grid-area: b4; 
+                background-color:rgba(236, 236, 241, 0.9);
+             }
+            .b7{
+                grid-area: b7;
+                background-color: rgba(236, 236, 241, 0.9);
+             }
+            .b8{
+                grid-area: b8;
+                background-color:rgba(236, 236, 241, 0.9);
+             }
+             h1{
+                text-align: center;
+                text-decoration: underline;
+                font-size: 35px;
+                margin-bottom: 35px;
+             }
+             p{
+                border-bottom: solid 1px gray;
+                margin: 15px 0;
+             }
+             code{
+                background-color: rgba(120, 118, 118,0.6);
+                padding: 5px;
+                border-radius: 5px;
+             }
+        </style>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link href="https://fonts.googleapis.com/css2?family=Fugaz+One&amp;family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <div class="b1">
+                <h1>Git Commands</h1> 
+            </div>
+            <div class="b2">
+                    <h1>Git Configuration &amp; Setup</h1>
+                    <code>git config --global user.name “Your Name”</code><p>Set your username globally.</p>
+                    <pre><code>git config --global user.email “youremail@example.com”</code></pre><p>Set your email globally.</p>
+                    <code>git config --global color.ui auto </code><p>Set to display colored output in the terminal.</p>
+                    <code>git help</code><p>Display the main help documentation, showing a list of commonly used Git commands.</p>
+            </div>
+            <div class="b3">
+                    <h1>Initializing a Repository</h1> 
+                    <code>git init</code><p>Initializes a new Git repository in the current directory.</p>	
+                    <code>git init (directory)</code><p>Creates a new Git repository in the specified directory.</p>	
+                    <code>git clone (repository_url)</code><p>This Clones a repository from a remote server to your local machine.</p>
+                    <pre><code>git clone -branch (branch_name) (repository_url)</code></pre><p>Clones a specific branch from a repository.</p>	
+            </div>
+            <div class="b4">
+                    <h1>Git Commit Message Types</h1>
+                    <code>git commit -m "feat: message"</code><p>Create a new commit for a new feature in the repository.</p>
+                    <code>git commit -m "fix: message"</code><p>Create a new commit to fix bugs in the codebase.</p>
+                    <code>git commit -m "chore: message"</code><p>Create a new commit for routine tasks or maintenance.</p>
+                    <code>git commit -m "refactor: message"</code><p>Create a new commit to improve the code structure or refactor the code.</p>
+                    <code>git commit -m "docs: message"</code><p>Create a new commit for changes to the documentation.</p>
+                    <code>git commit -m "style: message"</code><p>Create a new commit for changes to the styling and formatting of the codebase.</p>
+                    <code>git commit -m "test: message"</code><p>Create a new commit for changes related to tests.</p>
+                    <code>git commit -m "perf: message"</code><p>Create a new commit to improve the performance of the codebase.</p>
+                    <code>git commit -m "ci: message"</code><p>Create a new commit for changes related to continuous integration (CI).</p>
+                    <code>git commit -m "build: message"</code><p>Create a new commit for changes related to the build process.</p>
+                    <code>git commit -m "revert: message"</code><p>Create a new commit to revert a previous commit in the repository.</p>
+            </div>
+            <div class="b5">
+                    <h1> Basic Git Commands</h1>
+                    <code>git add (file)</code><p>Adds a specific file to the staging area.</p>
+                    <code>git add . (or) git add -all</code><p>Adds all modified and new files to the staging area.</p>
+                    <code>git status</code><p>Shows the current state of your repository, including tracked and untracked files, modified files, and branch information.</p>
+                    <code>git status -ignored</code><p>Displays ignored files in addition to the regular status output.</p>
+                    <code>git commit</code><p>Creates a new commit with the changes in the staging area and opens the default text editor for adding a commit message.</p>
+                    <code>git commit -m (“message”) or git commit -message (“message”)</code><p>Creates a new commit with the changes in the staging area and specifies the commit message inline.</p>
+                    <code>git commit -a (or) git commit -all</code><p>Commits all modified and deleted files in the repository without explicitly using git add to stage the changes.</p>
+                    <code>git rm (file)</code><p>Removes a file from both the working directory and the repository, staging the deletion.</p>
+                    <code>git mv</code><p>Moves (or) renames a file or directory in your Git repository.</p>
+                    <code>git push</code><p>Pushes the commits from the local repository to the default remote repository.</p>
+                    <code>git push -u origin</code><p>The git push -u origin command is used to push local commits to the remote repository, and the -u flag establishes an upstream reference, meaning that it links your local branch to the corresponding branch on the remote repository (usually origin).</p>
+                    <code>git notes add</code><p>Creates a new note and associates it with an object (commit, tag, etc.).</p>
+                    <code>git restore (file)</code><p>Restores the file in the working directory to its state in the last commit.</p>
+                    <code>git reset (commit)</code><p>Moves the branch pointer to a specified commit, resetting the staging area and the working directory to match the specified commit.</p>
+                    <code>git reset -soft (commit)</code><p>Moves the branch pointer to a specified commit, preserving the changes in the staging area and the working directory.</p>
+                    <code>git reset -hard (commit)</code><p>Moves the branch pointer to a specified commit, discarding all changes in the staging area and the working directory, effectively resetting the repository to the specified commit.</p>
+                    <code>git diff</code><p>Shows the changes between the working directory and the staging area (index).</p>
+                    <code>git diff (commit1) (commit2)</code><p>Displays the differences between two commits.</p>
+                    <code>git diff -staged or git diff -cached</code><p>Displays the changes between the staging area (index) and the last commit.</p>
+                    <code>git diff HEAD</code><p>Display the difference between the current directory and the last commit</p>
+            </div>
+            <div class="b6">
+                    <h1>Git Comparison</h1>
+                    <code>git show</code><p>Shows the details of a specific commit, including its changes.</p>
+                    <code>git show (commit-log value)</code><p>Shows the details of the specified commit, including its changes.</p>
+                   
+                    <h1>Git Managing History</h1>
+                    <code>git revert (commit)</code><p>Creates a new commit that undoes the changes introduced by the specified commit.</p>
+                    <code>git revert --no-commit (commit)</code><p>Undoes the changes introduced by the specified commit, but does not create a new commit.</p>
+                    <code>git rebase (branch)</code><p>Reapplies commits on the current branch onto the tip of the specified branch.</p>   
+            </div>
+            <div class="b7">
+                    <h1>Remote Repositories</h1>
+                    <code>git push</code><p>Pushing local commits to the remote repository.</p>
+                    <code>git push remote</code><p>Pushing local commits to the specified remote repository.</p>
+                    <code>git push remote (branch)</code><p>Pushing local commits to the specified branch of the remote repository.</p>
+                    <code>git push --all</code><p>Pushing all branches to the remote repository.</p>
+                    <code>git pull</code><p>Fetches changes from the remote repository and merges them into the current branch.</p>
+                    <code>git pull (remote)</code><p>Fetches changes from the specified remote repository and merges them into the current branch.</p>
+                    <code>git pull --rebase</code><p>Fetches changes from the remote repository and rebases the current branch onto the updated branch.</p>
+                    <code>git remote</code><p>Lists all remote repositories.</p>
+                    <code>git remote add name url</code><p>Adds a new remote repository with the specified name and URL.</p>
+                    <code>git fetch</code><p>Retrieves changes from a remote repository, including new branches and commits.</p>
+                    <code>git fetch (remote)</code><p>Retrieves changes from the specified remote repository.</p>
+                    <code>git fetch --prune</code><p>Removes any remote-tracking branches that no longer exist on the remote repository.</p>
+            </div>
+            <div class="b8">
+                    <h1>Branching and Merging</h1>
+                    <code>git log</code><p>Displays the commit history of the current branch.</p>
+                    <code>git log <branch-name></branch-name></code><p>Displays the commit history of the specified branch.</p>
+                    <code>git log --follow (file)</code><p>Displays the commit history of a file, including its renames.</p>
+                    <code>git log --all</code><p>Displays the commit history of all branches.</p>
+                    <code>git tag</code><p>Lists all tags in the repository.</p>
+                    <code>git tag <tag-name></tag-name></code><p>Creates a lightweight tag at the current commit.</p>
+                    <code>git tag <tag-name> (commit)</tag-name></code><p>Creates a lightweight tag at the specified commit.</p>
+                    <code>git tag -a <tag-name> -m ("message")</tag-name></code><p>Creates an annotated tag at the current commit with a custom message.</p>
+                    <code>git branch</code><p>Lists all branches in the repository.</p>
+                    <code>git branch <branch-name></branch-name></code><p>Creates a new branch with the specified name.</p>
+                    <code>git branch -d <branch-name></branch-name></code><p>Deletes the specified branch.</p>
+                    <code>git branch -a</code><p>Lists all local and remote branches.</p>
+                    <code>git branch -r</code><p>Lists all remote branches.</p>
+                    <code>git checkout <branch-name></branch-name></code><p>Switches to the specified branch.</p>
+                    <code>git checkout -b <new-branch-name></new-branch-name></code><p>Creates a new branch and switches to it.</p>
+                    <code>git checkout -- (file)</code><p>Discards changes made to the specified file and reverts it to the version in the last commit.</p>
+                    <code>git merge (branch)</code><p>Merges the specified branch into the current branch.</p>
+                    <code>git stash</code><p>Stashes the changes in the working directory,allowing you to switch to a different branch or commit without committing the changes.</p>
+                    <code>git stash list</code><p>Lists all stashes in the repository.</p>
+                    <code>git stash pop</code><p>Applies and removes the most recent stash from the stash list.</p>
+                    <code>git stash drop</code><p>Removes the most recent stash from the stash list.</p>
+            </div>
+        </div>
+    
+</body></html>
